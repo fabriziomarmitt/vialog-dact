@@ -35,8 +35,7 @@ class Publicacoes
         container.append """
             <div class="row">
                 <div class="col-xs-12">
-                    <h2>Nenhum Resultado encontrado</h2>
-                </div>
+                 </div>
             </div>
           """
       else
@@ -44,9 +43,27 @@ class Publicacoes
           container.append """
             <div class="row">
                 <div class="col-xs-12">
-                    <h2 style="border-bottom: solid 1px;">#{item.nomepublicacao}</h2>
-                    <p><b>Autores</b> #{item.pesquisadores.map (el) => el.nomepesquisador}</p>
-                    <p><a class="btn btn-secondary" href="/detalhes/#{item.idpublicacao}" role="button">Detalhes &raquo;</a></p>
+                    <h1><span>CTE</span> #{item.id.replace("CTe","")} <span class='pull-xs-right'><a href='/xml/#{item.id.replace("CTe","")}-cte.xml'>XML</a> | <a href='/comprovantes/#{item.id.replace("CTe","")}.jpg'>Comprovante</a></span></h1>
+                    <div class='row'>
+                      <div class='col-xs-6'>
+                        <fieldset>
+                          <legend>Destinatário</legend>
+                          <p><span>CPF</span> #{item.cteProcCTeInfCteDestCPF}</p>
+                          <p><span>IE</span> #{item.cteProcCTeInfCteDestIE}</p>
+                          <p><span>Nome</span> #{item.cteProcCTeInfCteDestXNome}</p>
+                          <p><span>Fone</span> #{item.cteProcCTeInfCteDestFone}</p>
+                        </fieldset>
+                      </div>
+                      <div class='col-xs-6'>
+                        <fieldset>
+                          <legend>Entrega</legend>
+                          <p><span>CPF</span> #{item.cteProcCTeInfCteRecebCPF}</p>
+                          <p><span>IE</span> #{item.cteProcCTeInfCteRecebIE}</p>
+                          <p><span>Nome</span> #{item.cteProcCTeInfCteRecebXNome}</p>
+                          <p><span>Fone</span> #{item.cteProcCTeInfCteRecebFone}</p>
+                        </fieldset>
+                      </div>
+                    </div>
                 </div>
             </div>
           """

@@ -61,3 +61,25 @@ body {
     color: white;
   }
 }
+
+.publicacoes-container{
+  > .row{
+    border-bottom: solid 1px #ccc;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+
+    h1{
+      font-size: 20px;
+    }
+    fieldset{
+      border: dashed 1px;
+      padding: 10px;
+      legend{
+        font-size: 18px;
+        display: inline;
+        width: auto;
+        padding: 10px;
+      }
+    }
+  }
+}

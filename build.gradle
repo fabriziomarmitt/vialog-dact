@@ -47,15 +47,12 @@ configurations {
 }
 
 dependencies {
-    compile("mysql:mysql-connector-java:5.1.16")
 	compile('org.springframework.boot:spring-boot-starter-web')
-    compile("org.springframework.boot:spring-boot-starter-data-jpa")
-    compile 'org.jtwig:jtwig-spring-boot-starter:5.54'
-	compile("org.springframework:spring-jdbc")
-    compile 'com.google.guava:guava:19.0'
+    compile("org.jtwig:jtwig-spring-boot-starter:5.54")
+	compile("com.google.guava:guava:19.0")
 	compile("org.springframework.boot:spring-boot-devtools")
-    compile("org.springframework.boot:spring-boot-starter-security")
-    compile("org.jbibtex:jbibtex:1.0.15")
+    compile("org.apache.solr:solr-solrj:6.3.0")
+
 	providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
 	testCompile('junit:junit')
 }
