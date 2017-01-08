@@ -43,7 +43,7 @@ class Publicacoes
           container.append """
             <div class="row">
                 <div class="col-xs-12">
-                    <h1><span>CTE</span> #{item.id.replace("CTe","")} <span class='pull-xs-right'><a href='/xml/#{item.id.replace("CTe","")}-cte.xml'>XML</a> | <a href='/comprovantes/#{item.id.replace("CTe","")}.jpg'>Comprovante</a></span></h1>
+                    <h1><span>CTE</span> #{item.id.replace("CTe","")} <span class='pull-xs-right'><a target='_blank' href='/xml/#{item.id.replace("CTe","")}-cte.xml'>XML</a> | <a target='_blank' href='/comprovantes/#{item.id.replace("CTe","")}.jpg'>Comprovante</a></span></h1>
                     <div class='row'>
                       <div class='col-xs-6'>
                         <fieldset>
