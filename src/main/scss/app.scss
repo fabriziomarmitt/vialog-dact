@@ -65,11 +65,17 @@ body {
 .publicacoes-container{
   > .row{
     border-bottom: solid 1px #ccc;
-    padding-bottom: 15px;
     margin-bottom: 15px;
+    background-color: #ccc;
+    padding: 10px 0px;
 
     h1{
       font-size: 20px;
+    }
+    .compl{
+      span{
+        display: block;
+      }
     }
     fieldset{
       border: dashed 1px;

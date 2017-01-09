@@ -34,8 +34,14 @@ public class Publicacao {
     private String cteProcCTeInfCteIdeUFFim;
     private String cteProcCTeInfCteIdeRetira;
     private String cteProcCTeInfCteIdeToma03Toma;
-    private String cteProcCTeInfCteComplObsCont;
-    private String cteProcCTeInfCteComplObsContXTexto;
+
+
+    private String cteProcCTeInfCteComplObsCont1;
+    private String cteProcCTeInfCteComplObsCont2;
+    private String cteProcCTeInfCteComplObsCont3;
+    private String cteProcCTeInfCteComplObsCont4;
+
+
     private String cteProcCTeInfCteEmitCNPJ;
     private String cteProcCTeInfCteEmitIE;
     private String cteProcCTeInfCteEmitXNome;
@@ -75,6 +81,7 @@ public class Publicacao {
     private String cteProcCTeInfCteExpedEnderExpedUF;
     private String cteProcCTeInfCteExpedEnderExpedCPais;
     private String cteProcCTeInfCteExpedEnderExpedXPais;
+    private String cteProcCTeInfCteRecebCNPJ;
     private String cteProcCTeInfCteRecebCPF;
     private String cteProcCTeInfCteRecebIE;
     private String cteProcCTeInfCteRecebXNome;
@@ -89,6 +96,7 @@ public class Publicacao {
     private String cteProcCTeInfCteRecebEnderRecebUF;
     private String cteProcCTeInfCteRecebEnderRecebCPais;
     private String cteProcCTeInfCteRecebEnderRecebXPais;
+    private String cteProcCTeInfCteDestCNPJ;
     private String cteProcCTeInfCteDestCPF;
     private String cteProcCTeInfCteDestIE;
     private String cteProcCTeInfCteDestXNome;
@@ -249,14 +257,6 @@ public class Publicacao {
 
     public String getCteProcCTeInfCteIdeToma03Toma() {
         return cteProcCTeInfCteIdeToma03Toma;
-    }
-
-    public String getCteProcCTeInfCteComplObsCont() {
-        return cteProcCTeInfCteComplObsCont;
-    }
-
-    public String getCteProcCTeInfCteComplObsContXTexto() {
-        return cteProcCTeInfCteComplObsContXTexto;
     }
 
     public String getCteProcCTeInfCteEmitCNPJ() {
@@ -473,6 +473,14 @@ public class Publicacao {
 
     public String getCteProcCTeInfCteDestCPF() {
         return cteProcCTeInfCteDestCPF;
+    }
+
+    public String getCteProcCTeInfCteRecebCNPJ() {
+        return cteProcCTeInfCteRecebCNPJ;
+    }
+
+    public String getCteProcCTeInfCteDestCNPJ() {
+        return cteProcCTeInfCteDestCNPJ;
     }
 
     public String getCteProcCTeInfCteDestIE() {
@@ -761,14 +769,43 @@ public class Publicacao {
     public void setCteProcCTeInfCteIdeToma03Toma(String cteProcCTeInfCteIdeToma03Toma){
         this.cteProcCTeInfCteIdeToma03Toma = cteProcCTeInfCteIdeToma03Toma;
     }
-    @Field("cteProc_CTe_infCte_compl_ObsCont_s")
-    public void setCteProcCTeInfCteComplObsCont(String cteProcCTeInfCteComplObsCont){
-        this.cteProcCTeInfCteComplObsCont = cteProcCTeInfCteComplObsCont;
+
+    public String getCteProcCTeInfCteComplObsCont1() {
+        return cteProcCTeInfCteComplObsCont1;
     }
-    @Field("cteProc_CTe_infCte_compl_ObsCont_xTexto_s")
-    public void setCteProcCTeInfCteComplObsContXTexto(String cteProcCTeInfCteComplObsContXTexto){
-        this.cteProcCTeInfCteComplObsContXTexto = cteProcCTeInfCteComplObsContXTexto;
+
+    @Field("cteProc_CTe_infCte_compl_ObsCont_1_s")
+    public void setCteProcCTeInfCteComplObsCont1(String cteProcCTeInfCteComplObsCont1) {
+        this.cteProcCTeInfCteComplObsCont1 = cteProcCTeInfCteComplObsCont1;
     }
+
+    public String getCteProcCTeInfCteComplObsCont2() {
+        return cteProcCTeInfCteComplObsCont2;
+    }
+
+    @Field("cteProc_CTe_infCte_compl_ObsCont_2_s")
+    public void setCteProcCTeInfCteComplObsCont2(String cteProcCTeInfCteComplObsCont2) {
+        this.cteProcCTeInfCteComplObsCont2 = cteProcCTeInfCteComplObsCont2;
+    }
+
+    public String getCteProcCTeInfCteComplObsCont3() {
+        return cteProcCTeInfCteComplObsCont3;
+    }
+
+    @Field("cteProc_CTe_infCte_compl_ObsCont_3_s")
+    public void setCteProcCTeInfCteComplObsCont3(String cteProcCTeInfCteComplObsCont3) {
+        this.cteProcCTeInfCteComplObsCont3 = cteProcCTeInfCteComplObsCont3;
+    }
+
+    public String getCteProcCTeInfCteComplObsCont4() {
+        return cteProcCTeInfCteComplObsCont4;
+    }
+
+    @Field("cteProc_CTe_infCte_compl_ObsCont_4_s")
+    public void setCteProcCTeInfCteComplObsCont4(String cteProcCTeInfCteComplObsCont4) {
+        this.cteProcCTeInfCteComplObsCont4 = cteProcCTeInfCteComplObsCont4;
+    }
+
     @Field("cteProc_CTe_infCte_emit_CNPJ_s")
     public void setCteProcCTeInfCteEmitCNPJ(String cteProcCTeInfCteEmitCNPJ){
         this.cteProcCTeInfCteEmitCNPJ = cteProcCTeInfCteEmitCNPJ;
@@ -925,6 +962,10 @@ public class Publicacao {
     public void setCteProcCTeInfCteExpedEnderExpedXPais(String cteProcCTeInfCteExpedEnderExpedXPais){
         this.cteProcCTeInfCteExpedEnderExpedXPais = cteProcCTeInfCteExpedEnderExpedXPais;
     }
+    @Field("cteProc_CTe_infCte_receb_CNPJ_s")
+    public void setCteProcCTeInfCteRecebCNPJ(String cteProcCTeInfCteRecebCNPJ) {
+        this.cteProcCTeInfCteRecebCNPJ = cteProcCTeInfCteRecebCNPJ;
+    }
     @Field("cteProc_CTe_infCte_receb_CPF_s")
     public void setCteProcCTeInfCteRecebCPF(String cteProcCTeInfCteRecebCPF){
         this.cteProcCTeInfCteRecebCPF = cteProcCTeInfCteRecebCPF;
@@ -981,6 +1022,12 @@ public class Publicacao {
     public void setCteProcCTeInfCteRecebEnderRecebXPais(String cteProcCTeInfCteRecebEnderRecebXPais){
         this.cteProcCTeInfCteRecebEnderRecebXPais = cteProcCTeInfCteRecebEnderRecebXPais;
     }
+
+    @Field("cteProc_CTe_infCte_dest_CNPJ_s")
+    public void setCteProcCTeInfCteDestCNPJ(String cteProcCTeInfCteDestCNPJ) {
+        this.cteProcCTeInfCteDestCNPJ = cteProcCTeInfCteDestCNPJ;
+    }
+
     @Field("cteProc_CTe_infCte_dest_CPF_s")
     public void setCteProcCTeInfCteDestCPF(String cteProcCTeInfCteDestCPF){
         this.cteProcCTeInfCteDestCPF = cteProcCTeInfCteDestCPF;

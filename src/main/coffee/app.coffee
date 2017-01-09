@@ -40,27 +40,40 @@ class Publicacoes
           """
       else
         data.forEach (item) ->
+          formatCpf = (numero) ->
+            numero.replace(/^(\d{3})(\d{3})(\d{3})(\d{2})$/, "$1.$2.$3-$4")
+
+          formatCnpj = (numero) ->
+            numero.replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})$/, "$1.$2.$3/$4-$5")
+
           container.append """
             <div class="row">
                 <div class="col-xs-12">
-                    <h1><span>CTE</span> #{item.id.replace("CTe","")} <span class='pull-xs-right'><a target='_blank' href='/xml/#{item.id.replace("CTe","")}-cte.xml'>XML</a> | <a target='_blank' href='/comprovantes/#{item.id.replace("CTe","")}.jpg'>Comprovante</a></span></h1>
+                    <h1><span>CTRC (CTE)</span> #{item.id.replace("CTe","")} <span class='pull-xs-right'><a target='_blank' href='/download/xml/#{item.id.replace("CTe","")}'>XML</a> | <a target='_blank' href='/download/comprovante/#{item.id.replace("CTe","")}'>Comprovante</a></span></h1>
+                    <p><span>NFe</span> #{item.cteProcCTeInfCteInfCTeNormInfDocInfNFeChave}</p>
+                    <p class='compl'>
+                       <span>#{item.cteProcCTeInfCteComplObsCont1 ? ''}</span>
+                       <span>#{item.cteProcCTeInfCteComplObsCont2 ? ''}</span>
+                       <span>#{item.cteProcCTeInfCteComplObsCont3 ? ''}</span>
+                       <span>#{item.cteProcCTeInfCteComplObsCont4 ? ''}</span>
+                    </p>
                     <div class='row'>
                       <div class='col-xs-6'>
                         <fieldset>
                           <legend>Destinatário</legend>
-                          <p><span>CPF</span> #{item.cteProcCTeInfCteDestCPF}</p>
-                          <p><span>IE</span> #{item.cteProcCTeInfCteDestIE}</p>
-                          <p><span>Nome</span> #{item.cteProcCTeInfCteDestXNome}</p>
-                          <p><span>Fone</span> #{item.cteProcCTeInfCteDestFone}</p>
+                          <p><span>CPF/CNPJ</span> #{formatCpf(item.cteProcCTeInfCteDestCPF ? '')}#{formatCnpj(item.cteProcCTeInfCteDestCNPJ ? '')}</p>
+                          <p><span>IE</span> #{item.cteProcCTeInfCteDestIE ? ''}</p>
+                          <p><span>Nome</span> #{item.cteProcCTeInfCteDestXNome ? ''}</p>
+                          <p><span>Fone</span> #{item.cteProcCTeInfCteDestFone ? ''}</p>
                         </fieldset>
                       </div>
                       <div class='col-xs-6'>
                         <fieldset>
-                          <legend>Entrega</legend>
-                          <p><span>CPF</span> #{item.cteProcCTeInfCteRecebCPF}</p>
-                          <p><span>IE</span> #{item.cteProcCTeInfCteRecebIE}</p>
-                          <p><span>Nome</span> #{item.cteProcCTeInfCteRecebXNome}</p>
-                          <p><span>Fone</span> #{item.cteProcCTeInfCteRecebFone}</p>
+                          <legend>Recebimento</legend>
+                          <p><span>CPF/CNPJ</span> #{formatCpf(item.cteProcCTeInfCteRecebCPF ? '')}#{formatCnpj(item.cteProcCTeInfCteRecebCNPJ ? '')}</p>
+                          <p><span>IE</span> #{item.cteProcCTeInfCteRecebIE ? ''}</p>
+                          <p><span>Nome</span> #{item.cteProcCTeInfCteRecebXNome ? ''}</p>
+                          <p><span>Fone</span> #{item.cteProcCTeInfCteRecebFone ? ''}</p>
                         </fieldset>
                       </div>
                     </div>
